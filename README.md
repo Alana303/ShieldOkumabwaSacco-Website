@@ -15,7 +15,7 @@
 The **Shield Okumbawa Community Sacco Website** is a modern, fast, and responsive platform built using **Vite + React**.  
 It provides Sacco members and visitors with an intuitive interface to explore Sacco services, register, log in, and learn more about the organization.
 
-Key highlights:
+**Key highlights:**
 
 - Clean and intuitive UI/UX  
 - Mobile-first responsive design  
@@ -26,26 +26,26 @@ Key highlights:
 
 ## ✨ Features
 
-- 🔐 **Member Login & Registration**  
-- 🏦 **Sacco Services Information**  
-- 👥 **Management Team Profiles**  
-- 📝 **About Us & Who We Are Pages**  
-- 🧭 **Dynamic Navbar & Routing**  
-- ⚡ **Vite-powered fast builds**  
-- 📱 **Fully responsive on all devices**  
-- 🎨 **Beautiful UI with Bootstrap & Animate.css**  
+- 🔐 Member Login & Registration  
+- 🏦 Sacco Services Information  
+- 👥 Management Team Profiles  
+- 📝 About Us & Who We Are Pages  
+- 🧭 Dynamic Navbar & Routing  
+- ⚡ Vite-powered fast builds  
+- 📱 Fully responsive on all devices  
+- 🎨 Beautiful UI with Bootstrap & Animate.css  
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category | Technologies |
-|----------|--------------|
-| **Frontend** | React, Vite |
-| **Styling** | Bootstrap, CSS3, Animate.css |
-| **Routing** | React Router |
-| **Tools** | Node.js, npm |
-| **Version Control** | Git & GitHub |
+| Category           | Technologies               |
+|-------------------|---------------------------|
+| Frontend          | React, Vite               |
+| Styling           | Bootstrap, CSS3, Animate.css |
+| Routing           | React Router              |
+| Tools             | Node.js, npm              |
+| Version Control   | Git & GitHub              |
 
 ---
 
@@ -75,53 +75,32 @@ Copy code
 
 ## 🖼️ Screenshots
 
-## 🖼️ Screenshots
+| Homepage | About 1 | About 2 |
+|----------|---------|---------|
+| ![Homepage](public/images/screenshots/Homepage.png) | ![About1](public/images/screenshots/About1.png) | ![About2](public/images/screenshots/About2.png) |
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+| Management | Publications 1 | Publications 2 |
+|------------|----------------|----------------|
+| ![Management](public/images/screenshots/Management1.png) | ![Publications1](public/images/screenshots/Publications1.png) | ![Publications2](public/images/screenshots/Publications2.png) |
 
-  <img src="public/images/screenshots/Homepage.png" width="300" alt="Homepage" />
-  <img src="public/images/screenshots/About1.png" width="300" alt="About Page" />
-  <img src="public/images/screenshots/About2.png" width="300" alt="About Page" />
-  <img src="public/images/screenshots/Management1.png" width="300" alt="Management Team" />
-  <img src="public/images/screenshots/Publications1" width="300" alt="Publications Page" />
-  <img src="public/images/screenshots/Publications2" width="300" alt="Publications Page" />
-  <img src="public/images/screenshots/Licensing.png" width="300" alt="Licensing Page" />
-  <img src="public/images/screenshots/Regulatory1.png" width="300" alt="Regulatory Page" />
-  <img src="public/images/screenshots/Register.png" width="300" alt="Register Page" />
-  <img src="public/images/screenshots/Login1.png" width="300" alt="Login Page" />
-  
+| Licensing | Regulatory | Register |
+|-----------|-----------|---------|
+| ![Licensing](public/images/screenshots/Licensing.png) | ![Regulatory](public/images/screenshots/Regulatory1.png) | ![Register](public/images/screenshots/Register.png) |
 
-</div>
-
-
----
-
-## 🚀 Getting Started
-
-### 1️⃣ Install Dependencies
-```bash
-npm install
-2️⃣ Run Development Server
-bash
-Copy code
-npm run dev
-3️⃣ Build for Production
-bash
-Copy code
-npm run build
-🌍 Deployment
-This project can be deployed to Netlify, Vercel, or GitHub Pages:
+| Login |
+|-------|
+| ![Login](public/images/screenshots/Login1.png) |
 
 
 📄 License / Usage
-© 2025 Shield Okumbawa Community Sacco & Jeff Fortune Amayo. All Rights Reserved
+© 2025 Shield Okumbawa Community Sacco & Jeff Fortune Amayo. All Rights Reserved.
 
-This source code is private and not licensed for public use, modification, or redistribution.
+This source code is private and proprietary. You may not copy, modify, distribute, or use this code without explicit written permission.
 
-👤 Frontend Web Developer
+👤 Frontend Developer
 Jeff Fortune Amayo (Alana303)
 GitHub: https://github.com/Alana303
 UI/UX Designer & Software Developer
 
 ⭐ Support
-If you like this project, consider giving it a star ⭐ on GitHub!
+If you like this project, consider giving it a star ⭐ on GitHub
