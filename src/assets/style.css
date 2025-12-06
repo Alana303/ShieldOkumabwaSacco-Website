@@ -1,0 +1,774 @@
+/* style.css */
+
+/* General Body Styles */
+body {
+    font-family: 'Mulish', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* A very light grey for background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif; /* Use a different font for headings */
+    font-weight: bolder; /* Bold headings */
+    color: #2c3e50; /* Darker color for headings */
+}
+
+/* Custom Colors (Matching SASRA's professional tone with a touch of your branding) */
+:root {
+    --primary-color: #0d6efd; /* Bootstrap primary blue */
+    --secondary-color: #6c757d; /* Bootstrap secondary grey */
+    --accent-color-1: #28a745; /* Green for success/growth */
+    --accent-color-2: #17a2b8; /* Teal for information/community */
+    --dark-color: #212529; /* Dark text/background */
+    --light-color: #f8f9fa; /* Light background */
+    --card-bg-light-blue: #e0f2f7; /* Lighter blue for card background */
+    --card-bg-light-green: #d4edda; /* Lighter green for card background */
+    --card-bg-light-cyan: #d1ecf1; /* Lighter cyan for card background */
+}
+
+.text-primary { color: var(--primary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.btn-primary { 
+    background-color: var(--primary-color); 
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #0a58ca; /* Slightly darker blue on hover */
+    border-color: #0a58ca;
+    transform: scale(1.05); /* Slight scale on hover */
+}
+.btn-outline-primary {
+    color: whitesmoke;
+    font-weight: bolder;
+    border-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+.btn-outline-primary:hover {
+    background-color: red; /* Original hover color */
+    color: #fff;
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Navbar Customizations */
+.navbar {
+    border-bottom: 1px solid #eee; /* Subtle separator */
+}
+.navbar-brand img {
+    height: 45px; /* Adjust logo size */
+    width: auto;
+}
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color); /* Your SACCO Name in primary color */
+}
+.navbar-nav .nav-link {
+    font-weight: 600;
+    color: #555;
+    padding: 0.8rem 1rem; /* Adjust padding for links */
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color); /* Highlight active/hovered link */
+}
+.navbar-nav .dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.navbar-nav .dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.left-margin {
+  margin-left: 60px; /* Adjust as needed */
+  display: inline-block; /* Ensures margin works on inline content */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #151269 !important; /* Dark blue background */
+    padding: 80px 0;
+    text-align: center;
+    color: whitesmoke !important;
+    font-weight: bolder !important;
+    position: relative; /* Needed for subtle background animation */
+    overflow: hidden; /* Hide anything that goes outside */
+}
+
+/* Hero Buttons */
+.hero-btn {
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+    display: inline-block; /* Ensure they stack correctly */
+    margin: 0 10px; /* Space between buttons */
+}
+
+.hero-btn-primary {
+    background-color: var(--primary-color) !important;
+    border: none; /* Make it a solid button */
+    color: #fff !important;
+}
+
+.hero-btn-primary:hover {
+    background-color: red !important; /* Change to your desired hover color */
+    color: #fff !important; /* Keep text white */
+    transform: scale(1.05); /* Subtle lift effect */
+}
+
+.hero-btn-outline {
+    color: var(--primary-color) !important;
+    border: 2px solid var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+.hero-btn-outline:hover {
+    background-color: red !important; /* Change to your desired hover color */
+    border-color: red !important;
+    color: white !important;
+    transform: scale(1.05);
+}
+
+
+@keyframes moveGradient {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(-10%, -10%);
+    }
+}
+
+.hero-section .container {
+    position: relative; /* Ensure content is on top of ::before */
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: white !important;
+    line-height: 1.2;
+}
+.hero-section .lead {
+    font-size: 1.3rem;
+    color: white; /* White for readability on dark background */
+    font-weight: bold;
+}
+
+/* Animate.css Integration for Hero Section */
+/* These ensure the specified animations run infinitely and at the desired speed */
+.hero-section .animate__animated.animate__infinite {
+    animation-iteration-count: infinite;
+}
+.hero-section .animate__animated.animate__slow {
+    animation-duration: 3s; /* Example: 3 seconds for a slower animation */
+}
+
+
+/* Key Offerings Section (Pillars of Empowerment) */
+.pillars-section { /* Class added to HTML section */
+    background-color: #f0f8ff; /* Light blue background for this section */
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+.text-secondary.fw-bold {
+  color: #000 !important;       /* Override Bootstrap's gray secondary */
+  font-weight: bold !important; /* Ensure it's bold */
+}
+
+.row.g-4 {
+    --bs-gutter-x: 2.5rem; /* Meaningful horizontal gap */
+    --bs-gutter-y: 2.5rem; /* Meaningful vertical gap */
+}
+
+.card {
+    border-radius: 12px; /* More rounded corners for modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Initial subtle shadow */
+    border: none; /* Remove default bootstrap border */
+}
+.card:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+.card-body {
+    padding: 2.5rem; /* More internal spacing */
+}
+.card-body i {
+    font-size: 3.5rem !important; /* Larger icons */
+    margin-bottom: 1rem !important;
+    display: block; /* Ensure icons are block level for proper centering */
+}
+.card-title {
+    font-size: 1.6rem; /* Larger title */
+    margin-bottom: 0.75rem;
+}
+.card-text {
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+}
+.btn-link {
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* Specific card background colors for Pillars */
+.row.g-4 .col:nth-child(1) .card {
+    background-color: var(--card-bg-light-blue);
+}
+.row.g-4 .col:nth-child(2) .card {
+    background-color: var(--card-bg-light-green);
+}
+.row.g-4 .col:nth-child(3) .card {
+    background-color: var(--card-bg-light-cyan);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.testimonial-item {
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+.testimonial-item img {
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Carousel controls customization */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+    color: var(--primary-color); /* Set color for arrows */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none; /* Remove default icon */
+    font-size: 2rem; /* Make icon larger */
+}
+.carousel-control-prev-icon::before {
+    content: "\F131"; /* Bootstrap icon for chevron-left */
+    font-family: "bootstrap-icons";
+    color: var(--primary-color);
+}
+.carousel-control-next-icon::before {
+    content: "\F132"; /* Bootstrap icon for chevron-right */
+    font-family: "bootstrap-icons";
+    color: var(--primary-color);
+}
+
+
+/* Achievement Counters Section */
+.achievement-counters {
+    background-color: #0056b3; /* Darker blue for this section background */
+    color: white;
+    margin-bottom: -20px;
+}
+
+.achievement-counters h2 {
+    color: white; /* White heading on dark blue background */
+}
+
+.counter-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background for items */
+    margin-bottom: -20px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px); /* Subtle blur effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.counter-item:hover {
+    transform: translateY(-5px);
+}
+
+.counter-value {
+    color: #ffd700; /* Gold/yellow for the numbers, stands out */
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background-color: #2c3e50; /* Dark grey/blue for newsletter */
+}
+.newsletter-section h2, .newsletter-section p {
+    color: white;
+}
+
+.newsletter-form input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+.newsletter-form input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    color: white;
+}
+
+.subscribe-btn {
+    transition: all 0.3s ease;
+  }
+
+  .subscribe-btn:hover {
+    background-color: #c1121f !important; /* Red tone */
+    color: #fff !important;
+    transform: scale(1.05); /* Subtle lift effect */
+  }
+
+/* Call to Action Section */
+.cta-section { /* Using the class directly for clarity */
+    background-color: var(--primary-color) !important; /* Ensure primary color */
+}
+.cta-section h2 {
+    color: #fff; /* White heading on primary background */
+}
+.cta-section p {
+    color: rgba(255,255,255,0.9); /* Slightly transparent white for lead text */
+}
+
+.cta-section .btn-light { /* Specificity for CTA button */
+    background-color: black;
+    color: white !important;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+    padding: 0.75rem 2rem; /* Adjusted padding */
+    border-radius: 0.5rem; /* Slight rounding */
+}
+.cta-section .btn-light:hover {
+    background-color: red;
+    transform: scale(1.05); /* Consistent scaling on hover */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* ============================ Contact Page Styling ============================ */
+
+/* HERO SECTION */
+.contact-hero {
+  background-color: #151269;
+  min-height: 320px;
+  color: white;
+  width: 100vw;
+}
+.hero-subtitle {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* CONTACT INFO CARDS */
+.contact-info-section .contact-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  padding: 2rem 1rem;
+}
+.contact-info-section .contact-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.hover-zoom i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.hover-zoom:hover i {
+  transform: scale(1.2);
+  color: #0d0a73;
+}
+
+/* CONTACT FORM */
+.contact-form-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #0d6efd;
+  padding: 2rem;
+}
+.contact-form-card .form-control {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.contact-form-card .form-control:focus {
+  border-color: #151269;
+  box-shadow: 0 0 5px rgba(21,18,105,0.5);
+}
+.hero-btn-primary {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.hero-btn-primary:hover {
+  background-color: #0d0a73;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* CONTACT FORM SECTION BACKGROUND */
+.bg-contact-section {
+  background-color: #0d0a73;
+  padding: 3rem 0;
+}
+
+/* CONTACT FORM CARD */
+.contact-form-card {
+  border-radius: 12px;
+  background-color: #ffffff; /* Keep the card readable */
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-card .form-control {
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form-card .form-control:focus {
+  border-color: #151269;
+  box-shadow: 0 0 5px rgba(21,18,105,0.5);
+}
+
+/* BUTTON */
+.hero-btn-primary {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary:hover {
+  background-color: #0d0a73;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* MAP SECTION */
+.map-embed iframe {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-shadow:hover {
+  transform: scale(1.01);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* FLOATING CTA BUTTON */
+.floating-cta {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.floating-cta:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  background-color: #0d0a73;
+  text-decoration: none;
+  color: white;
+}
+
+/* RESPONSIVE SPACING */
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 240px;
+  }
+  .hero-subtitle {
+    max-width: 90%;
+    font-size: 1rem;
+  }
+  .contact-info-section .contact-card {
+    padding: 1.5rem 1rem;
+  }
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+  .floating-cta {
+    bottom: 20px;
+    right: 20px;
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+/* Fade effect for floating CTA */
+.floating-cta.fade-out {
+  opacity: 0.35;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.become-member-btn {
+  background-color: #ffffff;   /* or whatever you had */
+  color: black !important;   /* keep text black */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.become-member-btn:hover {
+  background-color: red !important; /* button turns red */
+  color: #ffffff !important;        /* keep text white */
+  transform: scale(1.03);           /* optional slight lift */
+}
+
+.become-members-btn {
+  background-color: #ffffff !important;   /* or whatever you had */
+  color: black !important;   /* keep text black */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.become-members-btn:hover {
+  background-color: red !important; /* button turns red */
+  color: #ffffff !important;        /* keep text white */
+  transform: scale(1.03);           /* optional slight lift */
+}
+
+.register-btn {
+  background-color: #ffffff; /* or whatever the current default is */
+  color: black !important; /* keep text black */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bolder;
+}
+
+.register-btn:hover {
+  background-color: red !important; /* button background turns red */
+  color: #ffffff !important;        /* text stays white */
+  transform: scale(1.03);           /* optional tiny pop effect */
+}
+.register-now-btn {
+  background-color: #ffffff; /* current default background */
+  color: black !important; /* keep text black */
+  font-weight: bolder;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register-now-btn:hover {
+  background-color: red !important; /* turn red on hover */
+  color: #ffffff !important;        /* keep text white */
+  transform: scale(1.03);           /* optional subtle lift */
+}
+.join-sacco-btn {
+  background-color: #ffffff; /* default button background */
+  color: black !important; /* text stays white */
+  font-weight: bolder;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.join-sacco-btn:hover {
+  background-color: red !important; /* button turns red */
+  color: #ffffff !important;        /* keep text white */
+  transform: scale(1.03);           /* optional hover pop */
+}
+.learn-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.learn-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);         
+}
+.services-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.services-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);         
+}
+.careers-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.careers-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);         
+}
+.tenders-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.tenders-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);         
+}
+.publications-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.publications-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);         
+}
+
+.dayday-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.dayday-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);   
+}
+.fatter-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.fatter-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);   
+}
+.fatterr-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.fatterr-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);   
+}
+.feedbackk-btn {
+    background-color:  white;
+    color: black !important;
+    font-weight: bolder;
+    transition:  background-color 0.3s ease, transform 0.3s ease;
+}
+.feedbackk-btn:hover {
+    background-color: red !important; /* button turns red */
+    color: #ffffff !important;        /* keep text white */
+    transform: scale(1.03);   
+}
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: #ccc;
+
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+}
+/* Footer Logo Specific Styling */
+.footer-logo {
+    max-height: 100px; /* Reduced max height for the logo */
+    max-width: 200px;
+    width: 100px; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align with text */
+    margin-top: 10px; /* Adjust vertical position slightly if needed */
+}
+footer h5 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+footer a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+footer a:hover {
+    color: var(--primary-color);
+}
+footer .bi {
+    font-size: 1.8rem;
+    color: #aaa;
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+footer .bi:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px); /* Subtle bounce effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .navbar-brand span {
+        display: inline !important; /* Show SACCO name on smaller screens */
+        font-size: 1.2rem;
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    .card-body {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+    .card-body i {
+        font-size: 2.5rem !important; /* Smaller icons on small screens */
+    }
+    .card-title {
+        font-size: 1.4rem;
+    }
+    .testimonial-item img {
+        width: 60px; /* Adjust image size for smaller screens */
+        height: 60px;
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 8%; /* Make buttons slightly wider */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100% !important; /* Full width for mobile */
+        max-width: 300px; /* Constrain max width for inputs */
+    }
+    .col {
+        flex: 0 0 100%; /* Stack columns on very small screens */
+        max-width: 100%;
+    }
+}
+
+
+
