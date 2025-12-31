@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import WhoWeAre from "./pages/WhoWeAre";
-import BoardOfDirectors from "./pages/BoardofDirectors";
+import BoardOfDirectors from "./pages/BoardOfDirectors";
 import ManagementTeam from "./pages/ManagementTeam";
 import StrategicPlan from "./pages/StrategicPlan";
 import ServiceCharter from "./pages/ServiceCharter";
