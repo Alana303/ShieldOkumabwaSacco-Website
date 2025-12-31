@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+
 export default function About() {
   useEffect(() => {
     const btn = document.querySelector(".btn-outline-primary");
@@ -30,11 +31,11 @@ export default function About() {
       <section className="hero-section bg-light py-5 text-center">
         <div className="container-fluid">
           <h1 className="display-4 fw-bold text-primary animate__animated animate__fadeInDown animate__slow">
-            About Shield Okumbawa Community Sacco
+            About Shield Okumbawa Community SACCO
           </h1>
           <p className="lead mt-3 animate__animated animate__fadeInUp animate__delay-1s">
-            Empowering women through community-driven savings, investments, and
-            financial literacy since 2020.
+            Empowering individuals, families, and youth through community-driven
+            savings, investments, and financial education since 2020.
           </p>
           <div className="mt-4">
             <a
@@ -54,46 +55,43 @@ export default function About() {
       </section>
 
       {/* ===== Our Story Section ===== */}
-    {/* ===== Our Story Section ===== */}
-<section id="our-story" className="py-5 bg-white">
-  <div className="container-fluid">
-    <h2 className="text-center mb-5 fw-bold text-secondary animate__animated animate__fadeIn">
-      Our Story
-    </h2>
-    <div className="row align-items-center">
-      <div className="col-md-6 animate__animated animate__fadeInLeft">
-        <p className="lead" style={{ color: "black", fontWeight: "bolder" }}>
-          Founded in 2020 by a group of visionary women in Kenya, Shield
-          Okumbawa Community Sacco started as a small savings group.
-        </p>
-        <p style={{ color: "black", fontWeight: "bolder" }}>
-          What began as a humble initiative quickly grew into a movement,
-          driven by the determination to create financial security for women
-          who had long been excluded from traditional banking systems.
-        </p>
-        <p style={{ color: "black", fontWeight: "bolder" }}>
-          Through collective savings and shared investment opportunities,
-          members discovered the power of unity and the strength of
-          community-driven financial growth. This spirit of collaboration
-          continues to define our SACCO today.
-        </p>
-        <p style={{ color: "black", fontWeight: "bolder" }}>
-          Today, we empower over 20,000 women through financial services,
-          community support, and education — ensuring that every member has
-          the tools to build a brighter, more sustainable future.
-        </p>
-      </div>
-      <div className="col-md-6 text-center animate__animated animate__fadeInRight">
-        <img
-          src="/images/image1.jpg"
-          alt="Our Story"
-          className="img-fluid rounded shadow-sm"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
+      <section id="our-story" className="py-5 bg-white">
+        <div className="container-fluid">
+          <h2 className="text-center mb-5 fw-bold text-secondary animate__animated animate__fadeIn">
+            Our Story
+          </h2>
+          <div className="row align-items-center">
+            <div className="col-md-6 animate__animated animate__fadeInLeft">
+              <p className="lead" style={{ color: "black", fontWeight: "bolder" }}>
+                Founded in 2020 by a group of community-minded leaders in Kenya,
+                Shield Okumbawa Community SACCO began as a small collective savings initiative.
+              </p>
+              <p style={{ color: "black", fontWeight: "bolder" }}>
+                What started as a focused effort to improve financial access quickly evolved
+                into an inclusive movement supporting women, men, and young people who were
+                underserved by traditional financial institutions.
+              </p>
+              <p style={{ color: "black", fontWeight: "bolder" }}>
+                Through shared savings, responsible lending, and collaborative investment
+                opportunities, members experienced the strength of unity and the impact of
+                community-based financial growth.
+              </p>
+              <p style={{ color: "black", fontWeight: "bolder" }}>
+                Today, we support over 20,000 members by providing financial services,
+                education, and community support — equipping individuals and families with
+                the tools needed to build secure and sustainable futures.
+              </p>
+            </div>
+            <div className="col-md-6 text-center animate__animated animate__fadeInRight">
+              <img
+                src="/images/sacco1.jpg"
+                alt="Our Story"
+                className="img-fluid rounded shadow-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ===== Mission & Vision ===== */}
       <section id="mission-vision" className="py-5 bg-light">
@@ -106,10 +104,18 @@ export default function About() {
               <div className="card h-100 shadow-sm border-0 text-center animate__animated animate__zoomIn">
                 <div className="card-body">
                   <i className="bi bi-bullseye text-primary fs-1 mb-3"></i>
-                  <h5 className="card-title fw-bold" style={{color: "black", fontWeight: "bold" }}>Our Mission</h5>
-                  <p style={{ color: "black", fontWeight: "bolder" }} className="card-text">
-                    To provide accessible savings and investments that empower
-                    women to achieve financial independence.
+                  <h5
+                    className="card-title fw-bold"
+                    style={{ color: "black", fontWeight: "bold" }}
+                  >
+                    Our Mission
+                  </h5>
+                  <p
+                    style={{ color: "black", fontWeight: "bolder" }}
+                    className="card-text"
+                  >
+                    To provide accessible savings, credit, and investment solutions
+                    that empower individuals, families, and youth to achieve financial stability.
                   </p>
                 </div>
               </div>
@@ -118,10 +124,18 @@ export default function About() {
               <div className="card h-100 shadow-sm border-0 text-center animate__animated animate__zoomIn animate__delay-1s">
                 <div className="card-body">
                   <i className="bi bi-eye text-success fs-1 mb-3"></i>
-                  <h5 className="card-title fw-bold" style={{color: "black", fontWeight: "bolder",}}>Our Vision</h5>
-                  <p style={{ color: "black", fontWeight: "bold" }} className="card-text">
-                    A world where every woman has the support to build a
-                    prosperous future and sustainable community.
+                  <h5
+                    className="card-title fw-bold"
+                    style={{ color: "black", fontWeight: "bolder" }}
+                  >
+                    Our Vision
+                  </h5>
+                  <p
+                    style={{ color: "black", fontWeight: "bold" }}
+                    className="card-text"
+                  >
+                    A financially inclusive society where people of all genders and
+                    generations can build prosperous lives and resilient communities.
                   </p>
                 </div>
               </div>
@@ -133,16 +147,17 @@ export default function About() {
       {/* ===== CTA Section ===== */}
       <section className="bg-primary text-white py-5 text-center">
         <div className="container-fluid">
-          <h2 className="display-5 fw-bold mb-3 animate__animated animate__pulse animate__infinite animate__slow"
-          style={{
-            color: "white",
-            fontWeight: "bolder",
-          }}
+          <h2
+            className="display-5 fw-bold mb-3 animate__animated animate__pulse animate__infinite animate__slow"
+            style={{
+              color: "white",
+              fontWeight: "bolder",
+            }}
           >
-            Join Our Empowering Community
+            Join Our Growing Community
           </h2>
           <p className="lead mb-4" style={{ color: "black", fontWeight: "bold" }}>
-            Become a member and start building your financial future today.
+            Become a member and take confident steps toward your financial future.
           </p>
           <a
             href="/register"
@@ -150,7 +165,6 @@ export default function About() {
           >
             Register Now!
           </a>
-
         </div>
       </section>
     </>
